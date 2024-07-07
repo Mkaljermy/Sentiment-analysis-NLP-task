@@ -114,12 +114,12 @@ if st.button('Predict'):
     if user_input:
         prediction = predict_sentiment(user_input)
         if prediction >= 0.5:
-            st.write(f'Positive sentiment')
+            st.markdown("<div class='centered'><h3>Positive sentiment</h3></div>", unsafe_allow_html=True)
             img = Image.open('positive.png')
             st.image(img)
 
         else:
-            st.write(f'Negative sentiment')
+            st.markdown("<div class='centered'><h3>Negative sentiment</h3></div>", unsafe_allow_html=True)
             img = Image.open('negative.png')
             st.image(img)
 
